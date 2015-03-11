@@ -21,4 +21,14 @@ describe "torima yarude" do
     # => 値のチェック
     expect(a_v).to eq(1000)
   end
+
+  it "method_r" do
+    # => 初期設定とか
+    @obj = Testing.new
+    @obj.change_price 60
+    a_v, b_V = @obj.get_val
+
+    # => 値のチェック
+    expect(a_v).to eq(60)
+  end
 end
