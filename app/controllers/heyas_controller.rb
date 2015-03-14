@@ -17,7 +17,6 @@ class HeyasController < ApplicationController
   end
 
   def new
-    return if user_signed_in?
     @heya = Heya.new
     respond_with(@heya)
   end
