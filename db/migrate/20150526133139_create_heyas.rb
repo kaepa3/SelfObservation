@@ -1,8 +1,8 @@
 class CreateHeyas < ActiveRecord::Migration
   def change
     create_table :heyas do |t|
-      t.integer :ondo
-      t.integer :shitudo
+      t.float :temperature
+      t.float :humidity
 
       t.timestamps
     end
