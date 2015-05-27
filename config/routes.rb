@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root :to => 'heya#index'
+
   get 'heya/index'
 
   get 'heya/show'
