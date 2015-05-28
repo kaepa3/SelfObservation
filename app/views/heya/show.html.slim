@@ -1,6 +1,8 @@
 h1 Heya#show
 p Find me in app/views/heya/show.html.slim
 
+= line_chart @chart_data
+
 - @datas.each do |data|
   table
     tr
@@ -8,5 +10,3 @@ p Find me in app/views/heya/show.html.slim
       td  = data.humidity
       td  = data.date
 
-
-= line_chart @chart_data
