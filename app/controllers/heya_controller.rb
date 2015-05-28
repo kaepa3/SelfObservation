@@ -5,8 +5,8 @@ class HeyaController < ApplicationController
 
   def show
 
-    date_start = Time.now.beginning_of_day
-    date_end = Time.now.end_of_day
+    date_start = Time.zone.now.beginning_of_day
+    date_end = Time.zone.now.end_of_day
 
     @datas = Heya.where(date: date_start..date_end).order('date ASC')
     @chart_data = @datas.map{|x| [x.date, x.temperature] }
