@@ -62,5 +62,9 @@ group :production do
   gem 'pg'
   gem 'rails_12factor'
 end
-
+# Use Graph
 gem 'chartkick'
+
+# Use Datetime
+gem 'bootstrap3-datetimepicker-rails'
+gem 'momentjs-rails'

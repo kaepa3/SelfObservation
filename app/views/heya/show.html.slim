@@ -10,3 +10,9 @@ p Find me in app/views/heya/show.html.slim
       td  = data.humidity
       td  = data.date
 
+#controls
+  = form_tag("show", method:'get') do
+    .field
+    = text_field_tag :select_date, nil,{data: { date_format: 'YYYY/MM/DD' }, :class => 'form-control datetimepicker', placeholder: 'YYYY/MM/DD'}
+    .actions
+      = submit_tag "Log in" ,{class: 'btn btn-default'}
