@@ -46,11 +46,11 @@ html lang="en"
             ul.nav.nav-list
               - unless @datas.blank?
                 - @datas.each do |data|
-                  table
-                    tr
-                      td = data.date.strftime("%x %X")
-                      td = data.temperature
-                      td = data.humidity
+                  table#side_bar
+                      tr
+                        td = data.date.strftime("%x %X")
+                        td = data.temperature
+                        td = data.humidity
 
       footer
         p &copy; Company 2015

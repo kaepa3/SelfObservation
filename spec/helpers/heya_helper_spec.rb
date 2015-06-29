@@ -1,5 +1,5 @@
 require 'rails_helper'
-
+require 'json'
 # Specs in this file have access to a helper object that includes
 # the HeyaHelper. For example:
 #
@@ -11,5 +11,15 @@ require 'rails_helper'
 #   end
 # end
 RSpec.describe HeyaHelper, type: :helper do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it "天気予報を取得する" do
+    json = today_forecasts(140010)
+    responce = JSON.parse(json.to_s)
+    responce["forecasts"].each do |data|
+      if data["dateLabel"] == "今日"
+        puts data
+      end
+    end
+    expect(json.length).not_to eq(0)
+  end
+
 end
