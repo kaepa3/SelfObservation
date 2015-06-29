@@ -11,6 +11,6 @@ module HeyaHelper
 
   def today_forecasts(id)
     url = 'http://weather.livedoor.com/forecast/webservice/json/v1?city=' + id.to_s
-    return open(url).read
+    open(url).read
   end
 end
