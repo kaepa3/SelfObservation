@@ -1,6 +1,8 @@
 h1 Heya#show
-p Find me in app/views/heya/show.html.slim
-
+p
+  =@date_start
+  | 〜
+  =@date_end
 = line_chart @chart_data
 
 #controls
