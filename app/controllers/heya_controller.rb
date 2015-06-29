@@ -14,7 +14,7 @@ class HeyaController < ApplicationController
     record = Heya.new
     record.temperature = params[:temperature]
     record.humidity = params[:humidity]
-    record.date = Time.parse(params[:date])
+    record.date = Time.zone.parse(params[:date])
     record.save
     render :index
   end
